@@ -19,6 +19,14 @@ public:
     UPROPERTY(Replicated, VisibleAnywhere, BlueprintReadOnly, Category = "Genetics")
     TArray<UTraitBase*> ActiveGeneticTraits;
 
+    // Health property with replication
+    UPROPERTY(Replicated, VisibleAnywhere, BlueprintReadOnly, Category = "Player Stats")
+    float Health = 100.0f;
+
+    // Health regeneration property with replication
+    UPROPERTY(Replicated, VisibleAnywhere, BlueprintReadOnly, Category = "Player Stats")
+    float HealthRegen = 0.0f;
+
     // Function to add a new genetic trait.
     UFUNCTION(BlueprintCallable, Category = "Genetics")
     void AddGeneticTrait(UTraitBase* NewTrait);

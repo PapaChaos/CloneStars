@@ -54,6 +54,8 @@ class ACloneStarsCharacter : public ACharacter
 public:
 	ACloneStarsCharacter();
 
+	UFUNCTION(BlueprintCallable, Category = "Player Stats")
+	void ModifyHealthRegen(float DeltaHealthRegen);
 protected:
 	/** Called for movement input */
 	void Move(const FInputActionValue& Value);

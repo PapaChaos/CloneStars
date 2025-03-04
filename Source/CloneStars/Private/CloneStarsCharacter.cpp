@@ -100,3 +100,9 @@ void ACloneStarsCharacter::Look(const FInputActionValue& Value)
 		AddControllerPitchInput(LookAxisVector.Y);
 	}
 }
+
+// Add this method implementation in CloneStarsCharacter.cpp
+void ACloneStarsCharacter::ModifyHealthRegen(float DeltaHealthRegen)
+{
+	HealthRegen += DeltaHealthRegen;
+}
